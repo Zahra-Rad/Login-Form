@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #cfcfcf;
+}
+button {
+  background-color: #fff;
+  border: none;
+}
+input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+  caret-color: #cfcfcf;
+  font-size: 18px;
+  padding: 10px;
+  transition: 0.1s ease-out;
+  background-color: transparent;
+  &:focus {
+    ~ span {
+      margin-bottom: 30px;
+    }
+    outline: none;
+  }
+}
+body {
+  background-color: #ededed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+main {
+  width: 60%;
+  min-width: 400px;
+  background-color: #fff;
+  display: flex;
+  min-height: 562px;
+  position: relative;
+  margin: 0 auto;
+  > section {
+    transition: 0.8s ease-in-out;
+    &:first-of-type {
+      left: 0;
+      width: 70%;
+      background-color: #fff;
+      padding: 60px 200px;
+      display: flex;
+      > div {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        > h2 {
+          margin-bottom: 20px;
+        }
+        > div {
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: center;
+          min-height: 86px;
+          > span {
+            color: #cfcfcf;
+            font-size: 12px;
+            transform: translateY(30px);
+            transition: 0.1s ease-out;
+          }
+        }
+        > * {
+          width: 100%;
+          text-align: center;
+        }
+        > a {
+          font-size: 12px;
+          margin: 10px 0 50px;
+          transition: 0.1s linear;
+          &:hover {
+            color: #919191;
+          }
+        }
+        > button {
+          border-radius: 50px;
+          height: 40px;
+          font-size: 16px;
+          font-weight: lighter;
+          margin: 10px auto;
+          transition: 0.1s linear;
+          cursor: pointer;
+          &:first-of-type {
+            background-color: #d4af7a;
+            color: white;
+            &:hover {
+              background-color: #c99d5f;
+            }
+          }
+          &:last-of-type {
+            border: 2px solid #d3dae9;
+            color: #8fa1c7;
+            &:hover {
+              background-color: #d3dae989;
+            }
+            > a {
+              transition: 0.1s linear;
+              color: #455a81;
+              font-weight: bolder;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        &:first-of-type {
+          left: 50%;
+          transform: translateX(-100%);
+        }
+        &:last-of-type {
+          right: 50%;
+          transform: translateX(100%);
+          > a {
+            margin: 0px;
+          }
+        }
+      }
+    }
+    &:last-of-type {
+      right: 0;
+      width: 30%;
+      padding: 50px 40px;
+      background-color: #0000007e;
+      color: white;
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-weight: lighter;
+        > h3 {
+          font-size: 25px;
+        }
+        > p {
+          margin: 20px 0;
+          font-size: 15px;
+          text-align: center;
+        }
+      }
+      > button {
+        position: relative;
+        width: 100px;
+        height: 40px;
+        border-radius: 40px;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        display: flex;
+        margin: 0 auto;
+        overflow: hidden;
+        transform: translateY(200px);
+        cursor: pointer;
+        > span {
+          width: 100%;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          top: 350%;
+          transition: 0.8s ease-in-out;
+          &:first-of-type {
+            top: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none !important;
+}
