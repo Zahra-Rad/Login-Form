@@ -47,7 +47,6 @@ main {
   > section {
     transition: 0.8s ease-in-out;
     &:first-of-type {
-      left: 0;
       width: 70%;
       background-color: #fff;
       padding: 60px 200px;
@@ -56,6 +55,8 @@ main {
         position: absolute;
         display: flex;
         flex-direction: column;
+        left: 50%;
+        transform: translateX(-100%);
         > h2 {
           margin-bottom: 20px;
         }
@@ -115,31 +116,24 @@ main {
             }
           }
         }
-        &:first-of-type {
-          left: 50%;
-          transform: translateX(-100%);
-        }
-        &:last-of-type {
-          right: 50%;
-          transform: translateX(100%);
-          > a {
-            margin: 0px;
-          }
-        }
       }
     }
     &:last-of-type {
-      right: 0;
       width: 30%;
       padding: 50px 40px;
       background-color: #0000007e;
       color: white;
       > div {
+        width: 30%;
+        position: absolute;
+        top: 50px;
+        padding: 0 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         font-weight: lighter;
+        transition: 0.75s ease-in-out;
         > h3 {
           font-size: 25px;
         }
@@ -160,7 +154,7 @@ main {
         display: flex;
         margin: 0 auto;
         overflow: hidden;
-        transform: translateY(200px);
+        transform: translateY(350px);
         cursor: pointer;
         > span {
           width: 100%;
@@ -180,4 +174,8 @@ main {
 
 .hidden {
   display: none !important;
+}
+
+.transparent {
+  opacity: 0;
 }
