@@ -6,7 +6,7 @@
 
 - Created - June 2024
 
-- 🔧 Technologies Used - html , css3 , javascript (This project uses local storage.)
+- 🔧 Technologies Used - html , css3 , javascript
 
 - Role - Frontend
 
